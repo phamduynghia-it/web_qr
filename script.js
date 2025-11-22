@@ -8,10 +8,10 @@ const qrProducts = [
       tag: 'Hot 🔥🔥🔥',
       tagClass: 'bg-red-500 text-white',
       imageUrl: 'images/matrixrain.jpg',
-      videoUrl: 'images/wordrain.mp4',
+      videoUrl: 'images/matrixrain.mp4',
       detailImages: [
         'images/matrixrain.jpg',
-        'images/wordrain.mp4',
+        'images/matrixrain.mp4',
       ],
       description: [
         'Bạn chỉ cần nhập đầy đủ các thông tin:',
@@ -148,7 +148,7 @@ let currentImageIndex = 0; // KHÔNG DÙNG NỮA
 
 // --- UTILITY FUNCTION ---
 
-// Hàm định dạng tiền tệ (VND)
+// Hàm định dạng tiền tệ (VND) - GIỮ LẠI NHƯNG KHÔNG DÙNG NỮA
 function formatCurrency(price) {
   return price.toLocaleString('vi-VN', {
     style: 'currency',
@@ -193,7 +193,6 @@ function toggleMenu() {
 }
 
 // --- PRODUCT DETAIL CAROUSEL LOGIC (KHÔNG DÙNG NỮA) ---
-// Đã được giữ lại nhưng không sử dụng trong renderProductDetail mới
 function nextImage() {
   if (selectedProduct && selectedProduct.detailImages.length > 0) {
     currentImageIndex = (currentImageIndex + 1) % selectedProduct.detailImages.length;
@@ -219,17 +218,20 @@ function setImage(index) {
 
 // Render HTML cho 1 Product Card
 function renderProductCard(product) {
+  // *** ĐIỀU CHỈNH: Loại bỏ hiển thị giá và dùng object-contain cho ảnh/video ***
   return `
     <div 
         class="product-card group flex flex-col bg-white rounded-2xl shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl"
         data-product-id="${product.id}"
     >
-      <div class="relative w-full aspect-[3/2] cursor-pointer overflow-hidden media-container">
+      <div 
+        class="relative w-full aspect-[3/2] cursor-pointer overflow-hidden media-container" 
+        onclick="selectProduct(${product.id})"
+      >
         <div class="absolute inset-0">
             <video 
                 src="${product.videoUrl}" 
-                class="w-full h-full object-cover video-element hidden" 
-                autoplay muted loop playsinline
+                class="w-full h-full object-contain video-element hidden" 
                 preload="metadata"
                 poster="${product.imageUrl}"
                 aria-label="Video review sản phẩm ${product.name}"
@@ -240,7 +242,7 @@ function renderProductCard(product) {
             <img 
                 src="${product.imageUrl}" 
                 alt="${product.name}" 
-                class="w-full h-full object-cover image-element" 
+                class="w-full h-full object-contain image-element" 
             />
             
             </div>
@@ -264,7 +266,6 @@ function renderProductCard(product) {
 
       <div class="p-4 flex flex-col items-center text-center gap-3">
         <h3 class="font-bold text-lg text-slate-800">${product.name}</h3>
-        <p class="font-semibold text-slate-600 text-base">${formatCurrency(product.price)}</p>
         <div class="flex items-center gap-3 mt-1">
           <button 
             onclick="selectProduct(${product.id})"
@@ -296,6 +297,7 @@ function renderProductDetail() {
     </li>
   `).join('');
 
+  // *** ĐIỀU CHỈNH: Tỉ lệ khung hình aspect-[9/16] và object-contain ***
   return `
     <section class="py-12 md:py-20">
       <div class="mb-8">
@@ -307,11 +309,11 @@ function renderProductDetail() {
         </button>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-        <div id="product-image-carousel" class="relative w-full aspect-square md:aspect-[4/5] overflow-hidden rounded-2xl shadow-lg">
+        <div id="product-image-carousel" class="relative w-full aspect-[9/16] md:aspect-[9/16] overflow-hidden rounded-2xl shadow-lg">
           
           <video 
             src="${product.videoUrl}" 
-            class="w-full h-full object-cover"
+            class="w-full h-full object-contain"
             autoplay muted loop playsinline controls
             poster="${product.imageUrl}"
             aria-label="Video giới thiệu sản phẩm ${product.name}"
@@ -406,35 +408,12 @@ function attachHoverListeners() {
   const productCards = document.querySelectorAll('.product-card');
 
   productCards.forEach(card => {
-    const mediaContainer = card.querySelector('.media-container');
-    const videoElement = mediaContainer.querySelector('.video-element');
-    const imageElement = mediaContainer.querySelector('.image-element');
+    // XÓA toàn bộ logic hover/mouseleave để không phát video khi rê chuột 
     
-    if (!videoElement) {
-        return;
-    }
-
     // Gỡ bỏ event listener cũ nếu có (để tránh lặp)
     card.removeEventListener('mouseenter', card.mouseenterHandler);
     card.removeEventListener('mouseleave', card.mouseleaveHandler);
-
-    // --- Logic Hover (Hiển thị video) ---
-    card.mouseenterHandler = () => {
-        // Chỉ cần hiện video khi hover
-        imageElement.classList.add('hidden');
-        videoElement.classList.remove('hidden');
-        videoElement.play();
-    };
-
-    card.mouseleaveHandler = () => {
-        videoElement.pause();
-        videoElement.currentTime = 0; // Rewind video
-        imageElement.classList.remove('hidden');
-        videoElement.classList.add('hidden');
-    };
-
-    card.addEventListener('mouseenter', card.mouseenterHandler);
-    card.addEventListener('mouseleave', card.mouseleaveHandler);
+    
   });
 }
 

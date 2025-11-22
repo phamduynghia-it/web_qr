@@ -1,0 +1,15 @@
+/* Đảm bảo video trong product card bị ẩn và chỉ hiện ảnh */
+.product-card .video-element {
+    display: none !important;
+}
+
+/* Đảm bảo ảnh đại diện luôn hiển thị mặc định */
+.product-card .image-element {
+    display: block !important;
+}
+
+/* Đảm bảo ảnh/video hiển thị đầy đủ (contain) trong product card */
+.product-card .media-container .video-element,
+.product-card .media-container .image-element {
+    object-fit: contain;
+}
