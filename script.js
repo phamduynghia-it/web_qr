@@ -1,8 +1,28 @@
 // --- PRODUCT DATA (from app.component.ts) ---
 
 const qrProducts = [
-    {
+  {
       id: 1,
+      name: 'QR Chữ rơi (có ảnh)',
+      price: 159000,
+      tag: 'Hot 🔥🔥🔥',
+      tagClass: 'bg-red-500 text-white',
+      imageUrl: 'images/wordimg.jpg',
+      videoUrl: 'images/wordimg.mp4',
+      detailImages: [
+        'images/wordimg.mp4',
+      ],
+      description: [
+        "quét qr sau đó chạm vào màn nhạc sẽ được phát"
+      ],
+      features: [
+        'Mỗi câu 4-6 từ',
+        'Chữ, nhạc, ảnh theo yêu cầu',
+        'Hỗ trợ chỉnh sửa trong 24h'
+      ],
+    },
+    {
+      id: 7,
       name: 'QR Đếm ngược',
       price: 159000,
       tag: 'Hot 🔥🔥🔥',
@@ -13,19 +33,13 @@ const qrProducts = [
         'images/matrixrain.jpg',
         'images/matrixrain.mp4',
       ],
-      description: [
-        'Bạn chỉ cần nhập đầy đủ các thông tin:',
-        '1 câu nền (3-5 chữ) sẽ rơi xuống liên tục làm background.',
-        '3 câu sau xuất hiện khi màn hình đếm ngược 3... 2... 1, mỗi câu từ 3-5 chữ để đảm bảo đẹp mắt.',
-        '1 câu cuối (5-8 chữ) nằm trong trái tim, xuất hiện sau cùng như lời kết trọn cảm xúc.',
-        'Khi quét mã người nhận sẽ thấy nền chữ rơi ấn tượng, sau đó là màn đếm ngược 3-2-1 đầy hồi hộp. Ba câu chữ ngắn lần lượt xuất hiện, dẫn dắt cảm xúc từng bước, và cuối cùng trái tim hiện lên với câu đặc biệt bạn dành cho họ - khoảnh khắc vỡ oà khó quên.',
-        'QR Đếm Ngược phù hợp cho những lời tỏ tình, cầu hôn, chúc mừng hoặc bất kỳ dịp nào bạn muốn tạo hiệu ứng “chờ đợi để bùng nổ cảm xúc".',
+       description: [
+        "quét qr sau đó chạm vào màn nhạc sẽ được phát"
       ],
       features: [
-        'Cá nhân hoá 100%',
-        'Nhận mã kích hoạt form tạo ngay sau khi thanh toán',
-        'Hướng dẫn sử dụng chi tiết trong form',
-        'Hỗ trợ chỉnh sửa trong 24h',
+        'Mỗi câu 4-6 từ',
+        'Chữ, nhạc theo yêu cầu',
+        'Hỗ trợ chỉnh sửa trong 24h'
       ],
     },
     {
@@ -37,62 +51,89 @@ const qrProducts = [
       imageUrl: 'images/wordrain.jpg',
       videoUrl: 'images/wordrain.mp4',
       detailImages: ['images/wordrain.mp4'],
-      description: ['Mô tả chi tiết cho QR Chữ rơi.'],
-      features: ['Tính năng nổi bật 1', 'Tính năng nổi bật 2'],
+       description: [
+        "quét qr sau đó chạm vào màn nhạc sẽ được phát"
+      ],
+      features: [
+        'Mỗi câu 4-6 từ',
+        'Chữ, nhạc theo yêu cầu',
+        'Hỗ trợ chỉnh sửa trong 24h'
+      ],
     },
     {
       id: 3,
-      name: 'QR Thư Happy Birthday',
+      name: 'QR Thư lời nhắn',
       price: 159000,
       tag: 'Hot New 🔥',
       tagClass: 'bg-pink-400 text-white',
-      imageUrl: 'https://i.imgur.com/YwN9qSC.png',
-      videoUrl: 'https://i.imgur.com/dazwLSK.mp4',
-      detailImages: ['https://i.imgur.com/YwN9qSC.png'],
-      description: ['Mô tả chi tiết cho QR Thư Happy Birthday.'],
-      features: ['Tính năng nổi bật 1', 'Tính năng nổi bật 2'],
+      imageUrl: 'images/letter.jpg',
+      videoUrl: 'images/letter.mp4',
+      detailImages: ['images/letter.mp4'],
+       description: [
+        "quét qr sau đó chạm vào màn nhạc sẽ được phát"
+      ],
+      features: [
+        'Chữ, nhạc theo yêu cầu',
+        'Hỗ trợ chỉnh sửa trong 24h'
+      ],
     },
     {
       id: 4,
+      name: 'QR Vòng xoay trái tim',
+      price: 159000,
+      tag: 'Hot New 🔥',
+      tagClass: 'bg-pink-400 text-white',
+      imageUrl: 'images/traitim.jpg',
+      videoUrl: 'images/traitim.mp4',
+      detailImages: ['images/traitim.mp4'],
+       description: [
+        "quét qr sau đó chạm vào màn nhạc sẽ được phát"
+      ],
+      features: [
+        'Chữ, nhạc, ảnh theo yêu cầu',
+        'Hỗ trợ chỉnh sửa trong 24h'
+      ],
+    },
+    {
+      id: 5,
       name: 'QR Pháo hoa',
       price: 159000,
       tag: 'Hot New 🔥',
       tagClass: 'bg-pink-400 text-white',
-      imageUrl: 'https://i.imgur.com/L13aKiS.png',
-      videoUrl: 'https://i.imgur.com/YnO1w4s.mp4',
-      detailImages: ['https://i.imgur.com/L13aKiS.png'],
-      description: ['Mô tả chi tiết cho QR Pháo hoa.'],
-      features: ['Tính năng nổi bật 1', 'Tính năng nổi bật 2'],
-    },
-    {
-      id: 5,
-      name: 'QR Love Letter',
-      price: 159000,
-      tag: 'Hot New 🔥',
-      tagClass: 'bg-pink-400 text-white',
-      imageUrl: 'https://i.imgur.com/iJqgv4S.png',
+      imageUrl: 'images/phaohoa.jpg',
       videoUrl: 'https://i.imgur.com/T0a3aG1.mp4',
-      detailImages: ['https://i.imgur.com/iJqgv4S.png'],
-      description: ['Mô tả chi tiết cho QR Love Letter.'],
-      features: ['Tính năng nổi bật 1', 'Tính năng nổi bật 2'],
+      detailImages: ['images/phaohoa.mp4'],
+      description: [
+        "quét qr sau đó chạm vào màn nhạc sẽ được phát"
+      ],
+      features: [
+        'Mỗi câu 3-4 từ',
+        'Chữ nhạc theo yêu cầu',
+        'Hỗ trợ chỉnh sửa trong 24h'
+      ],
     },
     {
       id: 6,
-      name: 'QR Thư tình',
+      name: 'Web tình yêu',
       price: 159000,
       tag: 'New',
       tagClass: 'bg-gray-500 text-white',
-      imageUrl: 'https://i.imgur.com/J8t45I9.png',
+      imageUrl: 'images/webtinhyeu.jpg',
       videoUrl: 'https://i.imgur.com/8m5g2bJ.mp4',
-      detailImages: ['https://i.imgur.com/J8t45I9.png'],
-      description: ['Mô tả chi tiết cho QR Thư tình.'],
-      features: ['Tính năng nổi bật 1', 'Tính năng nổi bật 2'],
+      detailImages: ['images/webtinhyeu.mp4'],
+       description: [
+        "quét qr sau đó chạm vào màn nhạc sẽ được phát"
+      ],
+      features: [
+        'Chữ, nhạc, ảnh theo yêu cầu',
+        'Hỗ trợ chỉnh sửa trong 24h'
+      ],
     },
   ];
 
   const frameProducts = [
     {
-      id: 7,
+      id: 10,
       name: 'Khung ảnh Polaroid',
       price: 250000,
       tag: 'New',
