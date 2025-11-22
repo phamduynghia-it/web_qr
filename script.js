@@ -101,7 +101,7 @@ const qrProducts = [
       tag: 'Hot New 🔥',
       tagClass: 'bg-pink-400 text-white',
       imageUrl: 'images/phaohoa.jpg',
-      videoUrl: 'https://i.imgur.com/T0a3aG1.mp4',
+      videoUrl: 'images/phaohoa.mp4',
       detailImages: ['images/phaohoa.mp4'],
       description: [
         "quét qr sau đó chạm vào màn nhạc sẽ được phát"
@@ -119,7 +119,7 @@ const qrProducts = [
       tag: 'New',
       tagClass: 'bg-gray-500 text-white',
       imageUrl: 'images/webtinhyeu.jpg',
-      videoUrl: 'https://i.imgur.com/8m5g2bJ.mp4',
+      videoUrl: 'images/webtinhyeu.mp4',
       detailImages: ['images/webtinhyeu.mp4'],
        description: [
         "quét qr sau đó chạm vào màn nhạc sẽ được phát"
