@@ -269,10 +269,10 @@ function renderProductCard(product) {
           <button 
             onclick="selectProduct(${product.id})"
             class="bg-white border border-slate-700 text-slate-700 hover:bg-slate-100 text-sm font-semibold py-2 px-6 rounded-lg transition-colors">
-            Chi tiết
+              Xem video mẫu
           </button>
-          <a href="#" class="bg-slate-800 text-white hover:bg-slate-900 text-sm font-semibold py-2 px-6 rounded-lg transition-colors">
-            Mua Ngay
+          <a href="https://zalo.me/0359369930" class="bg-slate-800 text-white hover:bg-slate-900 text-sm font-semibold py-2 px-6 rounded-lg transition-colors">
+            Liên hệ
           </a>
         </div>
       </div>
