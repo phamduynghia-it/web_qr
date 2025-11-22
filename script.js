@@ -8,10 +8,10 @@ const qrProducts = [
       tag: 'Hot 🔥🔥🔥',
       tagClass: 'bg-red-500 text-white',
       imageUrl: 'images/matrixrain.jpg',
-      videoUrl: 'images/matrixrain.mp4',
+      videoUrl: 'images/wordrain.mp4',
       detailImages: [
         'images/matrixrain.jpg',
-        'images/matrixrain.mp4',
+        'images/wordrain.mp4',
       ],
       description: [
         'Bạn chỉ cần nhập đầy đủ các thông tin:',
@@ -144,7 +144,7 @@ const qrProducts = [
 let activeView = 'qr'; // 'qr' hoặc 'frame'
 let selectedProduct = null;
 let isMenuOpen = false;
-let currentImageIndex = 0; // State cho carousel detail
+let currentImageIndex = 0; // KHÔNG DÙNG NỮA
 
 // --- UTILITY FUNCTION ---
 
@@ -171,7 +171,7 @@ function setView(view) {
 function selectProduct(productId) {
   const allProducts = [...qrProducts, ...frameProducts];
   selectedProduct = allProducts.find(p => p.id === productId);
-  currentImageIndex = 0; // Reset index khi chọn sản phẩm mới
+  currentImageIndex = 0; // KHÔNG DÙNG NỮA
   renderApp();
   window.scrollTo(0, 0);
 }
@@ -192,8 +192,8 @@ function toggleMenu() {
   }
 }
 
-// --- PRODUCT DETAIL CAROUSEL LOGIC ---
-
+// --- PRODUCT DETAIL CAROUSEL LOGIC (KHÔNG DÙNG NỮA) ---
+// Đã được giữ lại nhưng không sử dụng trong renderProductDetail mới
 function nextImage() {
   if (selectedProduct && selectedProduct.detailImages.length > 0) {
     currentImageIndex = (currentImageIndex + 1) % selectedProduct.detailImages.length;
@@ -230,8 +230,8 @@ function renderProductCard(product) {
                 src="${product.videoUrl}" 
                 class="w-full h-full object-cover video-element hidden" 
                 autoplay muted loop playsinline
-                preload="metadata" // Tải trước metadata
-                poster="${product.imageUrl}" // Ảnh poster khi đang tải
+                preload="metadata"
+                poster="${product.imageUrl}"
                 aria-label="Video review sản phẩm ${product.name}"
             >
                 Your browser does not support the video tag.
@@ -243,15 +243,7 @@ function renderProductCard(product) {
                 class="w-full h-full object-cover image-element" 
             />
             
-            <div class="video-loading-spinner absolute inset-0 bg-gray-100 flex flex-col items-center justify-center p-4 text-center">
-                <svg class="animate-spin h-8 w-8 text-slate-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                <p class="mt-3 text-sm text-slate-600">Video đang tải, chờ ít phút...</p>
             </div>
-            
-        </div>
 
         <div class="absolute top-0 left-0 p-4 w-full">
           <div class="flex flex-col items-start gap-2">
@@ -288,13 +280,11 @@ function renderProductCard(product) {
   `;
 }
 
-// Render HTML cho Product Detail
+// Render HTML cho Product Detail (ĐÃ CHUYỂN THÀNH VIDEO DUY NHẤT)
 function renderProductDetail() {
   if (!selectedProduct) return '';
 
   const product = selectedProduct;
-  const totalImages = product.detailImages.length;
-  const isMultiImage = totalImages > 1;
 
   const descriptionHtml = product.description.map(line => `<p>${line}</p>`).join('');
   const featuresHtml = product.features.map(feature => `
@@ -318,37 +308,17 @@ function renderProductDetail() {
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
         <div id="product-image-carousel" class="relative w-full aspect-square md:aspect-[4/5] overflow-hidden rounded-2xl shadow-lg">
-          <img 
-            src="${product.detailImages[currentImageIndex]}" 
-            alt="Product Image ${currentImageIndex + 1}" 
-            class="w-full h-full object-cover product-main-image"
-            loading="lazy"
-          >
           
-          ${isMultiImage ? `
-            <div class="absolute inset-0 flex justify-between items-center px-4">
-              <button onclick="prevImage()" class="bg-black bg-opacity-40 text-white rounded-full h-10 w-10 flex items-center justify-center hover:bg-opacity-60 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button onclick="nextImage()" class="bg-black bg-opacity-40 text-white rounded-full h-10 w-10 flex items-center justify-center hover:bg-opacity-60 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-
-            <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2 carousel-dots">
-              ${product.detailImages.map((_, index) => `
-                <button 
-                  onclick="setImage(${index})"
-                  class="h-2.5 w-2.5 rounded-full transition ${currentImageIndex === index ? 'bg-white' : 'bg-white/50 hover:bg-white/75'}">
-                </button>
-              `).join('')}
-            </div>
-          ` : ''}
-        </div>
+          <video 
+            src="${product.videoUrl}" 
+            class="w-full h-full object-cover"
+            autoplay muted loop playsinline controls
+            poster="${product.imageUrl}"
+            aria-label="Video giới thiệu sản phẩm ${product.name}"
+          >
+            Your browser does not support the video tag.
+          </video>
+          </div>
 
         <div class="flex flex-col">
           <h1 class="text-3xl lg:text-4xl font-bold text-slate-900">${product.name}</h1>
@@ -425,12 +395,12 @@ function renderApp() {
   
   mainContent.innerHTML = htmlContent;
 
-  // Gắn lại logic hover và loading sau khi DOM được cập nhật
+  // Gắn lại logic hover sau khi DOM được cập nhật
   attachHoverListeners();
 }
 
 
-// --- HOVER LOGIC AND LOADING HIDE ---
+// --- HOVER LOGIC (ĐÃ BỎ LOGIC SPINNER VÀ LOADING) ---
 
 function attachHoverListeners() {
   const productCards = document.querySelectorAll('.product-card');
@@ -439,45 +409,21 @@ function attachHoverListeners() {
     const mediaContainer = card.querySelector('.media-container');
     const videoElement = mediaContainer.querySelector('.video-element');
     const imageElement = mediaContainer.querySelector('.image-element');
-    const spinnerElement = mediaContainer.querySelector('.video-loading-spinner');
-
-    // Ẩn spinner ngay lập tức nếu không có video (hoặc nếu video là ảnh tĩnh)
-    if (!videoElement) {
-        if (spinnerElement) spinnerElement.classList.add('hidden');
-        return;
-    }
-
-    // --- 1. Logic ẩn Spinner khi Video tải xong ---
-    const hideSpinner = () => {
-        if (spinnerElement) {
-            spinnerElement.classList.add('hidden');
-        }
-    };
     
-    // Nếu video đã sẵn sàng (cached hoặc preload đã hoàn tất)
-    // readyState >= 3 (HAVE_FUTURE_DATA) là trạng thái video có thể phát
-    if (videoElement.readyState >= 3) {
-        hideSpinner();
-    } else {
-        // Lắng nghe sự kiện canplay, khi video đã sẵn sàng phát
-        videoElement.addEventListener('canplay', hideSpinner, { once: true });
-        
-        // Hiện spinner nếu video chưa load
-        if (spinnerElement) spinnerElement.classList.remove('hidden');
+    if (!videoElement) {
+        return;
     }
 
     // Gỡ bỏ event listener cũ nếu có (để tránh lặp)
     card.removeEventListener('mouseenter', card.mouseenterHandler);
     card.removeEventListener('mouseleave', card.mouseleaveHandler);
 
-    // --- 2. Logic Hover (Hiển thị video) ---
+    // --- Logic Hover (Hiển thị video) ---
     card.mouseenterHandler = () => {
-        // Chỉ hiện video nếu spinner đã ẩn (tức là video đã load xong)
-        if (spinnerElement && spinnerElement.classList.contains('hidden')) {
-            imageElement.classList.add('hidden');
-            videoElement.classList.remove('hidden');
-            videoElement.play();
-        }
+        // Chỉ cần hiện video khi hover
+        imageElement.classList.add('hidden');
+        videoElement.classList.remove('hidden');
+        videoElement.play();
     };
 
     card.mouseleaveHandler = () => {
