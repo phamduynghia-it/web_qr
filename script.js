@@ -1,185 +1,152 @@
 // --- PRODUCT DATA (from app.component.ts) ---
 
 const qrProducts = [
-  {
-      id: 1,
-      name: 'QR Chữ rơi (có ảnh)',
-      price: 159000,
-      tag: 'Hot 🔥🔥🔥',
-      tagClass: 'bg-red-500 text-white',
-      imageUrl: 'images/wordimg.jpg',
-      videoUrl: 'images/wordimg.mp4',
-      detailImages: [
-        'images/wordimg.mp4',
-      ],
-      description: [
-        "quét qr sau đó chạm vào màn nhạc sẽ được phát"
-      ],
-      features: [
-        'Mỗi câu 4-6 từ',
-        'Chữ, nhạc, ảnh theo yêu cầu',
-        'Hỗ trợ chỉnh sửa trong 24h'
-      ],
+    {
+        id: 1,
+        name: "QR Chữ rơi (có ảnh)",
+        price: 159000,
+        tag: "Hot 🔥🔥🔥",
+        tagClass: "bg-red-500 text-white",
+        imageUrl: "images/wordimg.jpg",
+        videoUrl: "images/wordimg.mp4",
+        detailImages: ["images/wordimg.mp4"],
+        description: ["quét qr sau đó chạm vào màn nhạc sẽ được phát"],
+        features: [
+            "Mỗi câu 4-6 từ",
+            "Chữ, nhạc, ảnh theo yêu cầu",
+            "Hỗ trợ chỉnh sửa trong 24h",
+        ],
     },
     {
-      id: 7,
-      name: 'QR Đếm ngược',
-      price: 159000,
-      tag: 'Hot 🔥🔥🔥',
-      tagClass: 'bg-red-500 text-white',
-      imageUrl: 'images/matrixrain.jpg',
-      videoUrl: 'images/matrixrain.mp4',
-      detailImages: [
-        'images/matrixrain.jpg',
-        'images/matrixrain.mp4',
-      ],
-       description: [
-        "quét qr sau đó chạm vào màn nhạc sẽ được phát"
-      ],
-      features: [
-        'Mỗi câu 4-6 từ',
-        'Chữ, nhạc theo yêu cầu',
-        'Hỗ trợ chỉnh sửa trong 24h'
-      ],
+        id: 7,
+        name: "QR Đếm ngược",
+        price: 159000,
+        tag: "Hot 🔥🔥🔥",
+        tagClass: "bg-red-500 text-white",
+        imageUrl: "images/matrixrain.jpg",
+        videoUrl: "images/matrixrain.mp4",
+        detailImages: ["images/matrixrain.jpg", "images/matrixrain.mp4"],
+        description: ["quét qr sau đó chạm vào màn nhạc sẽ được phát"],
+        features: [
+            "Mỗi câu 4-6 từ",
+            "Chữ, nhạc theo yêu cầu",
+            "Hỗ trợ chỉnh sửa trong 24h",
+        ],
     },
     {
-      id: 2,
-      name: 'QR Chữ rơi',
-      price: 159000,
-      tag: 'Best Seller',
-      tagClass: 'bg-blue-500 text-white',
-      imageUrl: 'images/wordrain.jpg',
-      videoUrl: 'images/wordrain.mp4',
-      detailImages: ['images/wordrain.mp4'],
-       description: [
-        "quét qr sau đó chạm vào màn nhạc sẽ được phát"
-      ],
-      features: [
-        'Mỗi câu 4-6 từ',
-        'Chữ, nhạc theo yêu cầu',
-        'Hỗ trợ chỉnh sửa trong 24h'
-      ],
+        id: 2,
+        name: "QR Chữ rơi",
+        price: 159000,
+        tag: "Best Seller",
+        tagClass: "bg-blue-500 text-white",
+        imageUrl: "images/wordrain.jpg",
+        videoUrl: "images/wordrain.mp4",
+        detailImages: ["images/wordrain.mp4"],
+        description: ["quét qr sau đó chạm vào màn nhạc sẽ được phát"],
+        features: [
+            "Mỗi câu 4-6 từ",
+            "Chữ, nhạc theo yêu cầu",
+            "Hỗ trợ chỉnh sửa trong 24h",
+        ],
     },
     {
-      id: 3,
-      name: 'QR Thư lời nhắn',
-      price: 159000,
-      tag: 'Hot New 🔥',
-      tagClass: 'bg-pink-400 text-white',
-      imageUrl: 'images/letter.jpg',
-      videoUrl: 'images/letter.mp4',
-      detailImages: ['images/letter.mp4'],
-       description: [
-        "quét qr sau đó chạm vào màn nhạc sẽ được phát"
-      ],
-      features: [
-        'Chữ, nhạc theo yêu cầu',
-        'Hỗ trợ chỉnh sửa trong 24h'
-      ],
+        id: 3,
+        name: "QR Thư lời nhắn",
+        price: 159000,
+        tag: "Hot New 🔥",
+        tagClass: "bg-pink-400 text-white",
+        imageUrl: "images/letter.jpg",
+        videoUrl: "images/letter.mp4",
+        detailImages: ["images/letter.mp4"],
+        description: ["quét qr sau đó chạm vào màn nhạc sẽ được phát"],
+        features: ["Chữ, nhạc theo yêu cầu", "Hỗ trợ chỉnh sửa trong 24h"],
     },
     {
-      id: 4,
-      name: 'QR Vòng xoay trái tim',
-      price: 159000,
-      tag: 'Hot New 🔥',
-      tagClass: 'bg-pink-400 text-white',
-      imageUrl: 'images/traitim.jpg',
-      videoUrl: 'images/traitim.mp4',
-      detailImages: ['images/traitim.mp4'],
-       description: [
-        "quét qr sau đó chạm vào màn nhạc sẽ được phát"
-      ],
-      features: [
-        'Chữ, nhạc, ảnh theo yêu cầu',
-        'Hỗ trợ chỉnh sửa trong 24h'
-      ],
+        id: 4,
+        name: "QR Vòng xoay trái tim",
+        price: 159000,
+        tag: "Hot New 🔥",
+        tagClass: "bg-pink-400 text-white",
+        imageUrl: "images/traitim.jpg",
+        videoUrl: "images/traitim.mp4",
+        detailImages: ["images/traitim.mp4"],
+        description: ["quét qr sau đó chạm vào màn nhạc sẽ được phát"],
+        features: ["Chữ, nhạc, ảnh theo yêu cầu", "Hỗ trợ chỉnh sửa trong 24h"],
     },
     {
-      id: 5,
-      name: 'QR Pháo hoa',
-      price: 159000,
-      tag: 'Hot New 🔥',
-      tagClass: 'bg-pink-400 text-white',
-      imageUrl: 'images/phaohoa.jpg',
-      videoUrl: 'images/phaohoa.mp4',
-      detailImages: ['images/phaohoa.mp4'],
-      description: [
-        "quét qr sau đó chạm vào màn nhạc sẽ được phát"
-      ],
-      features: [
-        'Mỗi câu 3-4 từ',
-        'Chữ nhạc theo yêu cầu',
-        'Hỗ trợ chỉnh sửa trong 24h'
-      ],
+        id: 5,
+        name: "QR Pháo hoa",
+        price: 159000,
+        tag: "Hot New 🔥",
+        tagClass: "bg-pink-400 text-white",
+        imageUrl: "images/phaohoa.jpg",
+        videoUrl: "images/phaohoa.mp4",
+        detailImages: ["images/phaohoa.mp4"],
+        description: ["quét qr sau đó chạm vào màn nhạc sẽ được phát"],
+        features: [
+            "Mỗi câu 3-4 từ",
+            "Chữ nhạc theo yêu cầu",
+            "Hỗ trợ chỉnh sửa trong 24h",
+        ],
     },
     {
-      id: 6,
-      name: 'Web tình yêu',
-      price: 159000,
-      tag: 'New',
-      tagClass: 'bg-gray-500 text-white',
-      imageUrl: 'images/webtinhyeu.jpg',
-      videoUrl: 'images/webtinhyeu.mp4',
-      detailImages: ['images/webtinhyeu.mp4'],
-       description: [
-        "quét qr sau đó chạm vào màn nhạc sẽ được phát"
-      ],
-      features: [
-        'Chữ, nhạc, ảnh theo yêu cầu',
-        'Hỗ trợ chỉnh sửa trong 24h'
-      ],
+        id: 6,
+        name: "Web tình yêu",
+        price: 159000,
+        tag: "New",
+        tagClass: "bg-gray-500 text-white",
+        imageUrl: "images/webtinhyeu.jpg",
+        videoUrl: "images/webtinhyeu.mp4",
+        detailImages: ["images/webtinhyeu.mp4"],
+        description: ["quét qr sau đó chạm vào màn nhạc sẽ được phát"],
+        features: ["Chữ, nhạc, ảnh theo yêu cầu", "Hỗ trợ chỉnh sửa trong 24h"],
     },
-  ];
+];
 
-  const frameProducts = [
+const frameProducts = [
     {
-      id: 10,
-      name: 'Khung ảnh đôi đen',
-      tag: 'New',
-      tagClass: 'bg-indigo-500 text-white',
-      imageUrl: 'images/add.jpg',
-      videoUrl: 'images/add.mp4',
-      detailImages: ['https://picsum.photos/seed/frame1/400/500'],
-      description: ['Lưu giữ khoảnh khắc với khung ảnh độc đáo.'],
-      features: ['Chất liệu cao cấp', 'In ảnh sắc nét', 'Thiết kế tối giản'],
+        id: 10,
+        name: "Khung ảnh đôi đen",
+        tag: "New",
+        tagClass: "bg-indigo-500 text-white",
+        imageUrl: "images/add.jpg",
+        videoUrl: "images/add.mp4",
+        detailImages: ["https://picsum.photos/seed/frame1/400/500"],
+        description: ["Lưu giữ khoảnh khắc với khung ảnh độc đáo."],
+        features: ["Chất liệu cao cấp", "In ảnh sắc nét", "Thiết kế tối giản"],
     },
     {
-      id: 8,
-      name: 'Khung ảnh đôi trắng',
-      price: 280000,
-      tag: 'Best Seller',
-      tagClass: 'bg-blue-500 text-white',
-      imageUrl: 'images/adt.jpg',
-      videoUrl: 'images/adt.mp4',
-      detailImages: ['https://picsum.photos/seed/frame2/400/500'],
-      description: [
-        'Lưu giữ khoảnh khắc với khung ảnh độc đáo.',
-        'Kích thước : 18x13'
-      ],
-      features: [
-        'Chất liệu cao cấp', 'In ảnh sắc nét', 'Thiết kế tối giản'
-      ],
+        id: 8,
+        name: "Khung ảnh đôi trắng",
+        price: 280000,
+        tag: "Best Seller",
+        tagClass: "bg-blue-500 text-white",
+        imageUrl: "images/adt.jpg",
+        videoUrl: "images/adt.mp4",
+        detailImages: ["https://picsum.photos/seed/frame2/400/500"],
+        description: [
+            "Lưu giữ khoảnh khắc với khung ảnh độc đáo.",
+            "Kích thước : 18x13",
+        ],
+        features: ["Chất liệu cao cấp", "In ảnh sắc nét", "Thiết kế tối giản"],
     },
     {
-      id: 9,
-      name: 'Khung ảnh đơn',
-      price: 320000,
-      tag: 'Hot 🔥🔥🔥',
-      tagClass: 'bg-red-500 text-white',
-      imageUrl: 'images/khungdon.jpg',
-      videoUrl: 'images/khungdon.mp4',
-      detailImages: ['https://picsum.photos/seed/frame3/400/500'],
-      description: ['Kích thước : 18x13'],
-      features: [
-        "tặng kèm đèn nháy",
-        "Tặng kèm chân giá đỡ ảnh"
-      ],
+        id: 9,
+        name: "Khung ảnh đơn",
+        price: 320000,
+        tag: "Hot 🔥🔥🔥",
+        tagClass: "bg-red-500 text-white",
+        imageUrl: "images/khungdon.jpg",
+        videoUrl: "images/khungdon.mp4",
+        detailImages: ["https://picsum.photos/seed/frame3/400/500"],
+        description: ["Kích thước : 18x13"],
+        features: ["tặng kèm đèn nháy", "Tặng kèm chân giá đỡ ảnh"],
     },
-  ];
+];
 
 // --- APP STATE (Trạng thái ứng dụng) ---
 
-let activeView = 'qr'; // 'qr' hoặc 'frame'
+let activeView = "qr"; // 'qr' hoặc 'frame'
 let selectedProduct = null;
 let isMenuOpen = false;
 let currentImageIndex = 0; // KHÔNG DÙNG NỮA
@@ -188,76 +155,81 @@ let currentImageIndex = 0; // KHÔNG DÙNG NỮA
 
 // Hàm định dạng tiền tệ (VND) - GIỮ LẠI NHƯNG KHÔNG DÙNG NỮA
 function formatCurrency(price) {
-  return price.toLocaleString('vi-VN', {
-    style: 'currency',
-    currency: 'VND',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0
-  }).replace(/\s/g, ''); // Bỏ khoảng trắng trước VND
+    return price
+        .toLocaleString("vi-VN", {
+            style: "currency",
+            currency: "VND",
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+        })
+        .replace(/\s/g, ""); // Bỏ khoảng trắng trước VND
 }
 
 // --- STATE MANAGEMENT FUNCTIONS ---
 
 function setView(view) {
-  activeView = view;
-  selectedProduct = null;
-  isMenuOpen = false;
-  renderApp();
-  updateNavClasses();
+    activeView = view;
+    selectedProduct = null;
+    isMenuOpen = false;
+    renderApp();
+    updateNavClasses();
 }
 
 function selectProduct(productId) {
-  const allProducts = [...qrProducts, ...frameProducts];
-  selectedProduct = allProducts.find(p => p.id === productId);
-  currentImageIndex = 0; // KHÔNG DÙNG NỮA
-  renderApp();
-  window.scrollTo(0, 0);
+    const allProducts = [...qrProducts, ...frameProducts];
+    selectedProduct = allProducts.find((p) => p.id === productId);
+    currentImageIndex = 0; // KHÔNG DÙNG NỮA
+    renderApp();
+    window.scrollTo(0, 0);
 }
 
 function goBack() {
-  selectedProduct = null;
-  renderApp();
-  window.scrollTo(0, 0);
+    selectedProduct = null;
+    renderApp();
+    window.scrollTo(0, 0);
 }
 
 function toggleMenu() {
-  isMenuOpen = !isMenuOpen;
-  const menuElement = document.getElementById('mobile-menu-sidebar');
-  if (isMenuOpen) {
-    menuElement.classList.remove('hidden');
-  } else {
-    menuElement.classList.add('hidden');
-  }
+    isMenuOpen = !isMenuOpen;
+    const menuElement = document.getElementById("mobile-menu-sidebar");
+    if (isMenuOpen) {
+        menuElement.classList.remove("hidden");
+    } else {
+        menuElement.classList.add("hidden");
+    }
 }
 
 // --- PRODUCT DETAIL CAROUSEL LOGIC (KHÔNG DÙNG NỮA) ---
 function nextImage() {
-  if (selectedProduct && selectedProduct.detailImages.length > 0) {
-    currentImageIndex = (currentImageIndex + 1) % selectedProduct.detailImages.length;
-    renderApp();
-  }
+    if (selectedProduct && selectedProduct.detailImages.length > 0) {
+        currentImageIndex =
+            (currentImageIndex + 1) % selectedProduct.detailImages.length;
+        renderApp();
+    }
 }
 
 function prevImage() {
-  if (selectedProduct && selectedProduct.detailImages.length > 0) {
-    currentImageIndex = (currentImageIndex - 1 + selectedProduct.detailImages.length) % selectedProduct.detailImages.length;
-    renderApp();
-  }
+    if (selectedProduct && selectedProduct.detailImages.length > 0) {
+        currentImageIndex =
+            (currentImageIndex - 1 + selectedProduct.detailImages.length) %
+            selectedProduct.detailImages.length;
+        renderApp();
+    }
 }
 
 function setImage(index) {
-  if (selectedProduct && selectedProduct.detailImages.length > index) {
-    currentImageIndex = index;
-    renderApp();
-  }
+    if (selectedProduct && selectedProduct.detailImages.length > index) {
+        currentImageIndex = index;
+        renderApp();
+    }
 }
 
 // --- RENDERING FUNCTIONS ---
 
 // Render HTML cho 1 Product Card
 function renderProductCard(product) {
-  // *** ĐIỀU CHỈNH: Loại bỏ hiển thị giá và dùng object-contain cho ảnh/video ***
-  return `
+    // *** ĐIỀU CHỈNH: Loại bỏ hiển thị giá và dùng object-contain cho ảnh/video ***
+    return `
     <div 
         class="product-card group flex flex-col bg-white rounded-2xl shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-xl"
         data-product-id="${product.id}"
@@ -321,22 +293,28 @@ function renderProductCard(product) {
 
 // Render HTML cho Product Detail (ĐÃ CHUYỂN THÀNH VIDEO DUY NHẤT)
 function renderProductDetail() {
-  if (!selectedProduct) return '';
+    if (!selectedProduct) return "";
 
-  const product = selectedProduct;
+    const product = selectedProduct;
 
-  const descriptionHtml = product.description.map(line => `<p>${line}</p>`).join('');
-  const featuresHtml = product.features.map(feature => `
+    const descriptionHtml = product.description
+        .map((line) => `<p>${line}</p>`)
+        .join("");
+    const featuresHtml = product.features
+        .map(
+            (feature) => `
     <li class="flex items-center gap-3">
       <svg class="h-6 w-6 text-green-500 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
       </svg>
       <span class="text-slate-600">${feature}</span>
     </li>
-  `).join('');
+  `
+        )
+        .join("");
 
-  // *** ĐIỀU CHỈNH: Tỉ lệ khung hình aspect-[9/16] và object-contain ***
-  return `
+    // *** ĐIỀU CHỈNH: Tỉ lệ khung hình aspect-[9/16] và object-contain ***
+    return `
     <section class="py-12 md:py-20">
       <div class="mb-8">
         <button onclick="goBack()" class="text-slate-600 hover:text-slate-900 flex items-center gap-2">
@@ -385,23 +363,23 @@ function renderProductDetail() {
   `;
 }
 
-
 // --- MAIN APPLICATION RENDERING ---
 
 function renderApp() {
-  const mainContent = document.getElementById('main-content');
-  let htmlContent = '';
+    const mainContent = document.getElementById("main-content");
+    let htmlContent = "";
 
-  if (selectedProduct) {
-    // Render Product Detail
-    htmlContent = renderProductDetail();
-  } else {
-    // Render Hero and Product List
-    const currentProducts = activeView === 'qr' ? qrProducts : frameProducts;
-    
-    // Hero Section
-    if (activeView === 'qr') {
-      htmlContent += `
+    if (selectedProduct) {
+        // Render Product Detail
+        htmlContent = renderProductDetail();
+    } else {
+        // Render Hero and Product List
+        const currentProducts =
+            activeView === "qr" ? qrProducts : frameProducts;
+
+        // Hero Section
+        if (activeView === "qr") {
+            htmlContent += `
         <section class="text-center py-16 md:py-24 px-4">
           <h1 class="text-5xl md:text-7xl text-slate-900 tracking-wider">
             A <span class="font-dancing-script text-6xl md:text-8xl">Gift</span>
@@ -415,13 +393,15 @@ function renderApp() {
           </p>
         </section>
       `;
-    }
-    
-    // Products Section
-    const productCardsHtml = currentProducts.map(renderProductCard).join('');
+        }
 
-    // Đã chỉnh grid layout thành lg:grid-cols-3
-    htmlContent += `
+        // Products Section
+        const productCardsHtml = currentProducts
+            .map(renderProductCard)
+            .join("");
+
+        // Đã chỉnh grid layout thành lg:grid-cols-3
+        htmlContent += `
       <section class="pb-24 pt-8">
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12"
@@ -431,56 +411,54 @@ function renderApp() {
         </div>
       </section>
     `;
-  }
-  
-  mainContent.innerHTML = htmlContent;
+    }
 
-  // Gắn lại logic hover sau khi DOM được cập nhật
-  attachHoverListeners();
+    mainContent.innerHTML = htmlContent;
+
+    // Gắn lại logic hover sau khi DOM được cập nhật
+    attachHoverListeners();
 }
-
 
 // --- HOVER LOGIC (ĐÃ BỎ LOGIC SPINNER VÀ LOADING) ---
 
 function attachHoverListeners() {
-  const productCards = document.querySelectorAll('.product-card');
+    const productCards = document.querySelectorAll(".product-card");
 
-  productCards.forEach(card => {
-    // XÓA toàn bộ logic hover/mouseleave để không phát video khi rê chuột 
-    
-    // Gỡ bỏ event listener cũ nếu có (để tránh lặp)
-    card.removeEventListener('mouseenter', card.mouseenterHandler);
-    card.removeEventListener('mouseleave', card.mouseleaveHandler);
-    
-  });
+    productCards.forEach((card) => {
+        // XÓA toàn bộ logic hover/mouseleave để không phát video khi rê chuột
+
+        // Gỡ bỏ event listener cũ nếu có (để tránh lặp)
+        card.removeEventListener("mouseenter", card.mouseenterHandler);
+        card.removeEventListener("mouseleave", card.mouseleaveHandler);
+    });
 }
 
 // --- NAVIGATION CLASS UPDATER ---
 
 function updateNavClasses() {
-  const qrBtnDesktop = document.getElementById('qr-view-btn-desktop');
-  const frameBtnDesktop = document.getElementById('frame-view-btn-desktop');
+    const qrBtnDesktop = document.getElementById("qr-view-btn-desktop");
+    const frameBtnDesktop = document.getElementById("frame-view-btn-desktop");
 
-  if (qrBtnDesktop) {
-    qrBtnDesktop.className = `font-medium transition-colors ${
-      activeView === 'qr'
-        ? 'text-slate-900 border-b-2 border-slate-900'
-        : 'text-slate-600 hover:text-slate-900'
-    }`;
-  }
+    if (qrBtnDesktop) {
+        qrBtnDesktop.className = `font-medium transition-colors text-sm md:text-base ${
+            activeView === "qr"
+                ? "text-slate-900 border-b-2 border-slate-900"
+                : "text-slate-600 hover:text-slate-900"
+        }`;
+    }
 
-  if (frameBtnDesktop) {
-    frameBtnDesktop.className = `font-medium transition-colors ${
-      activeView === 'frame'
-        ? 'text-slate-900 border-b-2 border-slate-900'
-        : 'text-slate-600 hover:text-slate-900'
-    }`;
-  }
+    if (frameBtnDesktop) {
+        frameBtnDesktop.className = `font-medium transition-colors text-sm md:text-base ${
+            activeView === "frame"
+                ? "text-slate-900 border-b-2 border-slate-900"
+                : "text-slate-600 hover:text-slate-900"
+        }`;
+    }
 }
 
 // --- INITIALIZATION ---
 
-document.addEventListener('DOMContentLoaded', () => {
-  renderApp(); // Render the initial view
-  updateNavClasses(); // Set initial navigation highlights
+document.addEventListener("DOMContentLoaded", () => {
+    renderApp(); // Render the initial view
+    updateNavClasses(); // Set initial navigation highlights
 });

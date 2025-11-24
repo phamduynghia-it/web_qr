@@ -53,18 +53,18 @@
                             >
                         </div>
 
-                        <div class="hidden md:flex items-center gap-10">
+                        <div class="flex items-center gap-6 md:gap-10">
                             <button
                                 id="qr-view-btn-desktop"
                                 onclick="setView('qr')"
-                                class="font-medium transition-colors"
+                                class="font-medium transition-colors text-sm md:text-base"
                             >
                                 Mẫu QR
                             </button>
                             <button
                                 id="frame-view-btn-desktop"
                                 onclick="setView('frame')"
-                                class="font-medium transition-colors"
+                                class="font-medium transition-colors text-sm md:text-base"
                             >
                                 Mẫu Khung ảnh
                             </button>
@@ -107,90 +107,8 @@
                                 />
                             </a>
                         </div>
-
-                        <div class="md:hidden">
-                            <button
-                                onclick="toggleMenu()"
-                                class="text-slate-800 p-2 -mr-2"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class="h-7 w-7"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M4 6h16M4 12h16m-7 6h7"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
                     </nav>
                 </header>
-
-                <div id="mobile-menu-sidebar" class="hidden fixed inset-0 z-50">
-                    <div
-                        class="absolute inset-0 bg-black bg-opacity-50"
-                        onclick="toggleMenu()"
-                    ></div>
-
-                    <div
-                        class="relative z-10 bg-white w-80 h-full ml-auto p-6 flex flex-col shadow-xl"
-                    >
-                        <div class="flex justify-between items-center mb-10">
-                            <div class="flex flex-col items-center">
-                                <span
-                                    class="font-dancing-script text-3xl text-slate-900"
-                                    >DN</span
-                                >
-                                <span
-                                    class="text-xs tracking-[0.2em] text-gray-500 -mt-1"
-                                    >GIFTS SHOP</span
-                                >
-                            </div>
-                            <button
-                                onclick="toggleMenu()"
-                                class="text-slate-600 hover:text-slate-900 p-2 -mr-2"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    class="h-6 w-6"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M6 18L18 6M6 6l12 12"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-
-                        <nav
-                            class="flex flex-col gap-6 text-lg font-medium text-slate-700"
-                        >
-                            <a
-                                href="#"
-                                onclick="event.preventDefault(); setView('qr'); toggleMenu();"
-                                class="hover:text-slate-900"
-                                >Mẫu QR</a
-                            >
-                            <a
-                                href="#"
-                                onclick="event.preventDefault(); setView('frame'); toggleMenu();"
-                                class="hover:text-slate-900"
-                                >Mẫu Khung ảnh</a
-                            >
-                        </nav>
-                    </div>
-                </div>
 
                 <main
                     id="main-content"
