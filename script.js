@@ -1,6 +1,22 @@
 // --- PRODUCT DATA (from app.component.ts) ---
 
 const qrProducts = [
+  {
+        id: 11,
+        name: "QR Giáng sinh (có ảnh)",
+        price: 159000,
+        tag: "Hot 🔥🔥🔥",
+        tagClass: "bg-red-500 text-white",
+        imageUrl: "images/qrgiangsinh.jpg",
+        videoUrl: "images/add.mp4",
+        detailImages: ["images/wordimg.mp4"],
+        description: ["quét qr sau đó chạm vào màn nhạc sẽ được phát"],
+        features: [
+            "Mỗi câu 4-6 từ",
+            "Chữ, nhạc, ảnh theo yêu cầu",
+            "Hỗ trợ chỉnh sửa trong 24h",
+        ],
+    },
     {
         id: 1,
         name: "QR Chữ rơi (có ảnh)",
